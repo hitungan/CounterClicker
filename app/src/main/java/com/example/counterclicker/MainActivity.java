@@ -8,10 +8,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int a = 0;
+    private int a;
     private Button plus;
     private Button minus;
     private TextView text;
+    private Button reset;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,9 +21,13 @@ public class MainActivity extends AppCompatActivity {
         plus=findViewById(R.id.button);
         minus=findViewById(R.id.button2);
         text=findViewById(R.id.textView);
+        reset=findViewById(R.id.button3);
+
+
 
         if(savedInstanceState != null){
-            a = savedInstanceState.getInt("a", 0);
+            a = 0 + savedInstanceState.getInt("a", 0);
+            text.setText(a+"");
         }
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 a--;
+                text.setText(a+"");
+            }
+        });
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                a=0;
                 text.setText(a+"");
             }
         });

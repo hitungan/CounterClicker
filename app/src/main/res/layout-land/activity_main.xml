@@ -14,11 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
 
-        android:text="00000" />
+        android:text="0" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="119dp"
         android:orientation="horizontal">
 
         <Button
@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="240dp"
+
             android:gravity="center"
             android:text="Kurang" />
 
@@ -42,5 +43,11 @@
 
             android:text="Tambah" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset" />
 
 </LinearLayout>
